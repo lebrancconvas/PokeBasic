@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios"; 
 import {Typography, Button, Card, CardActions, CardContent, CardMedia, Link} from "@mui/material"; 
 import {Box} from "@mui/system"; 
+import Input from "../components/Input"; 
 
 const pokemonID = 322;      
 const URL = `https://pokeapi.co/api/v2/pokemon/${pokemonID}`;    
@@ -29,6 +30,9 @@ const TestAPI = () => {
 				<Typography variant="h3">
 					Pokemon API 
 				</Typography>
+			<Box>
+				<Input /> 
+			</Box>
 			</Box>
 			<Box>  
 				<Card sx={{maxWidth: 374}}> 
