@@ -10,8 +10,8 @@ Learning React with Axios (API Management) and Redux (Store Management).
 - Open your terminal or command-prompt  
 - git clone https://github.com/lebrancconvas/PokeBasic.git  
 - cd PokeBasic/web in Terminal (cd PokeBasic\web in Command-Prompt)  
-- yarn install or npm install 
-- yarn start or npm start 
+- yarn install (If you use yarn) or npm install (If you use npm) 
+- yarn start (If you use yarn) or npm start (If you use npm) 
 - type URL "http://localhost:3000" or "http://127.0.0.1:3000" on your browser. 
 - Success!! 
 
