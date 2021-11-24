@@ -66,9 +66,9 @@ const TestAPI = () => {
 							Type 
 						</Typography>
 						<Typography variant="body2">
-							{pokemon.types.map(type => {
+							{pokemon.types.map((type, num) => {
 								return (
-								capitalized(type.type.name) + ", "    
+								`${num + 1}) ${capitalized(type.type.name)} `   
 							)})}
 						</Typography>
 						<br /> 
@@ -76,9 +76,9 @@ const TestAPI = () => {
 							Ability	
 						</Typography>  
 						<Typography variant="body2"> 
-							{pokemon.abilities.map(ability => {
+							{pokemon.abilities.map((ability, num) => {
 								return (
-									capitalized(ability.ability.name) + ", "   
+									`${num + 1}) ${capitalized(ability.ability.name)} `  
 								)
 							})} 
 						</Typography> 
