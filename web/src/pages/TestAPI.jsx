@@ -3,7 +3,8 @@ import axios from "axios";
 import {Typography, Button, Card, CardActions, CardContent, CardMedia, Link} from "@mui/material"; 
 import {Box} from "@mui/system"; 
 
-const URL = "https://pokeapi.co/api/v2/pokemon/242";   
+const pokemonID = 322;      
+const URL = `https://pokeapi.co/api/v2/pokemon/${pokemonID}`;    
 
 const TestAPI = () => {
 	const [pokemon, setPokemon] = useState(null);  
@@ -18,7 +19,7 @@ const TestAPI = () => {
 	if(!pokemon) return null; 
 
 	const pokemonAbility = (n) => pokemon.abilities[n - 1].ability.name; 
-	const pokemonType = (n) => pokemon.types[n - 1].type.name; 
+	// const pokemonType = (n) => pokemon.types[n - 1].type.name; 
 	const capitalized = (str) => str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
 	const infoLink = `https://bulbapedia.bulbagarden.net/wiki/${capitalized(pokemon.name)}`;  
 
@@ -31,7 +32,7 @@ const TestAPI = () => {
 			</Box>
 			<Box>  
 				<Card sx={{maxWidth: 374}}> 
-					<CardMedia component="img" height="250" alt={pokemon.name} image={pokemon.sprites.front_default} /> 
+					<CardMedia component="img" height="300" alt={pokemon.name} image={pokemon.sprites.front_default} /> 
 					<CardContent>
 						<Typography gutterBottom variant="h5" component="div"> 
 							{capitalized(pokemon.name)}     
@@ -40,14 +41,21 @@ const TestAPI = () => {
 							Type 
 						</Typography>
 						<Typography variant="body2">
-							{capitalized(pokemonType(1))} 
+							{pokemon.types.map(type => {
+								return (
+								capitalized(type.type.name) + "    "    
+							)})}
 						</Typography>
 						<br /> 
 						<Typography variant="h6">
 							Ability	
 						</Typography>  
 						<Typography variant="body2"> 
-							{capitalized(pokemonAbility(1))} 
+							{pokemon.abilities.map(ability => {
+								return (
+									capitalized(ability.ability.name) + "     "  
+								)
+							})} 
 						</Typography> 
 					</CardContent>
 					<CardActions>
