@@ -1,19 +1,20 @@
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"; 
+import {Container} from "@mui/material";  
+import {Box} from "@mui/system"; 
+import TestAPI from "./pages/TestAPI"; 
+
 const App = () => {
   return (
     <div>
-      <header className="App-header">
-        <p>
-          Edit <code> src / App.js </code> and save to reload. 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Container maxWidth="sm"> 
+          <Box mt={3}>  
+            <Routes>
+              <Route exact path="/testapi" element={<TestAPI />}/> 
+            </Routes>
+          </Box>
+        </Container>
+      </Router>
     </div>
   );
 }
