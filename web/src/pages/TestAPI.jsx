@@ -24,7 +24,6 @@ const TestAPI = () => {
 		axios.get(URL)
 			.then(res => {
 				setPokemon(res.data);
-				console.log(res.data); 
 			}, []); 
 	})
 
