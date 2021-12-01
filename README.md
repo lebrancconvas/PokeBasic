@@ -1,7 +1,7 @@
 # PokeBasic 
 
 ## Purpose 
-Learning React with Axios (API Management) and Redux (Store Management).  
+Learning React with Axios (API Management) and Redux (State Management).   
 
 ## Setup Project (Development)  
 - install git 
